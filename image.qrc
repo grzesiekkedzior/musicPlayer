@@ -1,0 +1,31 @@
+<RCC>
+    <qresource prefix="/image">
+        <file>glyphicons-17-bin.png</file>
+        <file>glyphicons-18-music.png</file>
+        <file>glyphicons-19-note.png</file>
+        <file>glyphicons-33-wifi-alt.png</file>
+        <file>glyphicons-53-eye-close.png</file>
+        <file>glyphicons-84-random.png</file>
+        <file>glyphicons-142-database-plus.png</file>
+        <file>glyphicons-145-folder-open.png</file>
+        <file>glyphicons-146-folder-plus.png</file>
+        <file>glyphicons-160-playlist.png</file>
+        <file>glyphicons-171-step-backward.png</file>
+        <file>glyphicons-174-play.png</file>
+        <file>glyphicons-175-pause.png</file>
+        <file>glyphicons-176-stop.png</file>
+        <file>glyphicons-179-step-forward.png</file>
+        <file>glyphicons-183-mute.png</file>
+        <file>glyphicons-184-volume-down.png</file>
+        <file>glyphicons-185-volume-up.png</file>
+        <file>glyphicons-191-circle-plus.png</file>
+        <file>glyphicons-195-circle-question-mark.png</file>
+        <file>glyphicons-196-circle-info.png</file>
+        <file>glyphicons-198-remove.png</file>
+        <file>glyphicons-433-plus.png</file>
+        <file>glyphicons-504-cd.png</file>
+        <file>glyphicons-517-menu-hamburger.png</file>
+        <file>glyphicons-530-list-alt.png</file>
+        <file>disc_cover.png</file>
+    </qresource>
+</RCC>
