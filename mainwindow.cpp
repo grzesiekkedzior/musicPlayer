@@ -77,7 +77,6 @@ QStringList MainWindow::open_files()
                                                           "Select one or more files to open",
                                                           "/home/grzesiek/Muzyka",
                                                           "(*.mp3 *.wav *.mp4 )");
-
     return fileNames;
 }
 
@@ -87,24 +86,24 @@ void MainWindow::on_tableWidget_doubleClicked(const QModelIndex &index)
     QString tabName= ui->tabWidget->tabText(ui->tabWidget->currentIndex());
     playlist->setObjectName(tabName);
     QString tabFirst = "new playlist";
-    if(!ui->tabWidget->currentIndex()==0||tabName!=tabFirst)
-    {
-    playlist->clear();
-    qDebug()<<tabName;
-    qDebug()<<"test";
-    tabName = tabName+".m3u";
-    playlist->load(QUrl(QUrl::fromLocalFile(tabName)),"m3u");
-    mediaPlayer->setPlaylist(playlist);
-    mediaPlayer->play();
-    playlist->setCurrentIndex(index.row());
-    tableObjectSelected();
-    }
-    else
-    mediaPlayer->setPlaylist(mainPlaylist);
-    mainPlaylist->setCurrentIndex(index.row());
-    ui->tableWidget->selectRow(mainPlaylist->currentIndex());
-    mediaPlayer->play();
-    changeTablePositonOnPlay();
+    	if(!ui->tabWidget->currentIndex()==0||tabName!=tabFirst)
+    		{
+    			playlist->clear();
+    			qDebug()<<tabName;
+    			qDebug()<<"test";
+		        tabName = tabName+".m3u";
+		        playlist->load(QUrl(QUrl::fromLocalFile(tabName)),"m3u");
+		    	mediaPlayer->setPlaylist(playlist);
+		    	mediaPlayer->play();
+		    	playlist->setCurrentIndex(index.row());
+		    	tableObjectSelected();
+    		}
+    	else
+    		mediaPlayer->setPlaylist(mainPlaylist);
+    		mainPlaylist->setCurrentIndex(index.row());
+    		ui->tableWidget->selectRow(mainPlaylist->currentIndex());
+    		mediaPlayer->play();
+    		changeTablePositonOnPlay();
 
     ui->playButton->setIcon(QIcon(":/image/glyphicons-175-pause.png"));
 }
@@ -132,6 +131,7 @@ void MainWindow::on_TrackSlider_sliderMoved(int position)
 void MainWindow::set_track_time()
 {
     QString format = "mm:ss";
+    
     if (mediaPlayer->duration() > 360000)
     {
         format = "hh:mm:ss";
@@ -296,11 +296,11 @@ void MainWindow::on_VolumeSlider_sliderMoved(int position)
     QPixmap p2(":/image/glyphicons-184-volume-down.png");
     mediaPlayer->setVolume(position);
 
-     if(position>0)
-     {
+    if(position>0)
+    {
          ui->labelVolume->setPixmap(p1);
          ui->labelVolume->setAlignment(Qt::AlignCenter);
-     }
+    }
     if(position==0)
     {
         ui->labelVolume->setPixmap(p);
